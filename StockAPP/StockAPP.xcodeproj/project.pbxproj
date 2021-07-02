@@ -18,6 +18,9 @@
 		B9D3B024268F6B2D00AE3976 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3B023268F6B2D00AE3976 /* APICaller.swift */; };
 		B9D3B027268F6B4500AE3976 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3B026268F6B4500AE3976 /* PersistenceManager.swift */; };
 		B9D3B02A268F6B5500AE3976 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3B029268F6B5500AE3976 /* HapticsManager.swift */; };
+		B9D3B030268F7C1A00AE3976 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3B02F268F7C1A00AE3976 /* Extension.swift */; };
+		B9D3B034268F7DE100AE3976 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3B033268F7DE100AE3976 /* SearchResultTableViewCell.swift */; };
+		B9D3B038268F89FD00AE3976 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3B037268F89FD00AE3976 /* SearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		B9D3B023268F6B2D00AE3976 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		B9D3B026268F6B4500AE3976 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		B9D3B029268F6B5500AE3976 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		B9D3B02F268F7C1A00AE3976 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		B9D3B033268F7DE100AE3976 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		B9D3B037268F89FD00AE3976 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 		B9D3AFF9268F667A00AE3976 /* StockAPP */ = {
 			isa = PBXGroup;
 			children = (
+				B9D3B02E268F7C0D00AE3976 /* Extension */,
 				B9D3B013268F68CD00AE3976 /* Other */,
 				B9D3B012268F68C200AE3976 /* Managers */,
 				B9D3B011268F68B000AE3976 /* Controllers */,
@@ -80,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				B9D3B02C268F6D0B00AE3976 /* Enum */,
+				B9D3B037268F89FD00AE3976 /* SearchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -87,6 +95,7 @@
 		B9D3B010268F68A900AE3976 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B9D3B032268F7DD100AE3976 /* Cell */,
 				B9D3B005268F667B00AE3976 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -128,6 +137,22 @@
 			children = (
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		B9D3B02E268F7C0D00AE3976 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B9D3B02F268F7C1A00AE3976 /* Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B9D3B032268F7DD100AE3976 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B9D3B033268F7DE100AE3976 /* SearchResultTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,11 +225,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9D3B02A268F6B5500AE3976 /* HapticsManager.swift in Sources */,
+				B9D3B034268F7DE100AE3976 /* SearchResultTableViewCell.swift in Sources */,
 				B9D3B01F268F696900AE3976 /* StockDetailViewController.swift in Sources */,
 				B9D3B019268F694F00AE3976 /* TopStoriesViewController.swift in Sources */,
 				B9D3AFFF268F667A00AE3976 /* WatchListViewController.swift in Sources */,
 				B9D3B027268F6B4500AE3976 /* PersistenceManager.swift in Sources */,
+				B9D3B030268F7C1A00AE3976 /* Extension.swift in Sources */,
 				B9D3B024268F6B2D00AE3976 /* APICaller.swift in Sources */,
+				B9D3B038268F89FD00AE3976 /* SearchResponse.swift in Sources */,
 				B9D3AFFB268F667A00AE3976 /* AppDelegate.swift in Sources */,
 				B9D3AFFD268F667A00AE3976 /* SceneDelegate.swift in Sources */,
 				B9D3B01C268F695B00AE3976 /* SearchResultsViewController.swift in Sources */,

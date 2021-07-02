@@ -12,12 +12,6 @@ final class APICaller {
     // MARK: - Properties
     static let shared = APICaller()
     
-    private struct Constants {
-        static let apiKey = ""
-        static let sandboxApiKey = ""
-        static let baseUrl = ""
-    }
-    
     // MARK: - Life cycle
     private init() {
         
@@ -25,13 +19,33 @@ final class APICaller {
     
     // MARK: - Public
     
+    func search(query: String, completion: @escaping (Result<SearchResponse, Error>) -> Void) {
+        guard let safeQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
+        request(url: url(for: .search, queryParams: ["q": safeQuery]), expection: SearchResponse.self, completion: completion)
+    }
+    
     // MARK: - Methods
     
     private func url(for endPoint: Endpoint, queryParams: [String: String] = [:]) -> URL? {
         
+        var urlString = Constants.baseUrl + endPoint.rawValue
         
+        var queryItems = [URLQueryItem]()
+        // Add Any parameters
         
-        return nil
+        for (name , value) in queryParams {
+            queryItems.append(.init(name: name, value: value))
+        }
+        
+        // Add Token
+        queryItems.append(.init(name: "token", value: Constants.apiKey))
+        
+        // Convert query items to suffix string
+        let queryString = queryItems.map{ "\($0.name)=\($0.value ?? "")" }.joined(separator: "&")
+        
+        urlString += "?" + queryString
+        
+        return URL(string: urlString)
     }
     
     private func request<T: Codable>(url: URL?, expection: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
@@ -58,11 +72,20 @@ final class APICaller {
 // MARK: - ENUM
 extension APICaller {
     private enum Endpoint: String {
-        case search
+        case search = "search"
     }
     
     private enum APIError: Error {
         case invalidUrl
         case noDataReturned
+    }
+    
+    // Sign up API from https://finnhub.io/
+    private struct Constants {
+        
+        static let apiKey = "I Did Push api key "
+        static let sandboxApiKey = ""
+        static let baseUrl = ""
+        
     }
 }
