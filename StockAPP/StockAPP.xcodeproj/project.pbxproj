@@ -15,6 +15,9 @@
 		B9D3B019268F694F00AE3976 /* TopStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3B018268F694F00AE3976 /* TopStoriesViewController.swift */; };
 		B9D3B01C268F695B00AE3976 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3B01B268F695B00AE3976 /* SearchResultsViewController.swift */; };
 		B9D3B01F268F696900AE3976 /* StockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3B01E268F696900AE3976 /* StockDetailViewController.swift */; };
+		B9D3B024268F6B2D00AE3976 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3B023268F6B2D00AE3976 /* APICaller.swift */; };
+		B9D3B027268F6B4500AE3976 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3B026268F6B4500AE3976 /* PersistenceManager.swift */; };
+		B9D3B02A268F6B5500AE3976 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3B029268F6B5500AE3976 /* HapticsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		B9D3B018268F694F00AE3976 /* TopStoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesViewController.swift; sourceTree = "<group>"; };
 		B9D3B01B268F695B00AE3976 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		B9D3B01E268F696900AE3976 /* StockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailViewController.swift; sourceTree = "<group>"; };
+		B9D3B023268F6B2D00AE3976 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		B9D3B026268F6B4500AE3976 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		B9D3B029268F6B5500AE3976 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 		B9D3B00F268F689E00AE3976 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B9D3B02C268F6D0B00AE3976 /* Enum */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,6 +106,9 @@
 		B9D3B012268F68C200AE3976 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				B9D3B023268F6B2D00AE3976 /* APICaller.swift */,
+				B9D3B026268F6B4500AE3976 /* PersistenceManager.swift */,
+				B9D3B029268F6B5500AE3976 /* HapticsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -111,6 +121,13 @@
 				B9D3AFFC268F667A00AE3976 /* SceneDelegate.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		B9D3B02C268F6D0B00AE3976 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +199,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9D3B02A268F6B5500AE3976 /* HapticsManager.swift in Sources */,
 				B9D3B01F268F696900AE3976 /* StockDetailViewController.swift in Sources */,
 				B9D3B019268F694F00AE3976 /* TopStoriesViewController.swift in Sources */,
 				B9D3AFFF268F667A00AE3976 /* WatchListViewController.swift in Sources */,
+				B9D3B027268F6B4500AE3976 /* PersistenceManager.swift in Sources */,
+				B9D3B024268F6B2D00AE3976 /* APICaller.swift in Sources */,
 				B9D3AFFB268F667A00AE3976 /* AppDelegate.swift in Sources */,
 				B9D3AFFD268F667A00AE3976 /* SceneDelegate.swift in Sources */,
 				B9D3B01C268F695B00AE3976 /* SearchResultsViewController.swift in Sources */,
