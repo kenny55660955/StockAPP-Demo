@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		B9D3AFFB268F667A00AE3976 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3AFFA268F667A00AE3976 /* AppDelegate.swift */; };
 		B9D3AFFD268F667A00AE3976 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3AFFC268F667A00AE3976 /* SceneDelegate.swift */; };
-		B9D3AFFF268F667A00AE3976 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3AFFE268F667A00AE3976 /* ViewController.swift */; };
-		B9D3B002268F667A00AE3976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9D3B000268F667A00AE3976 /* Main.storyboard */; };
+		B9D3AFFF268F667A00AE3976 /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3AFFE268F667A00AE3976 /* WatchListViewController.swift */; };
 		B9D3B004268F667B00AE3976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9D3B003268F667B00AE3976 /* Assets.xcassets */; };
 		B9D3B007268F667B00AE3976 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9D3B005268F667B00AE3976 /* LaunchScreen.storyboard */; };
+		B9D3B019268F694F00AE3976 /* TopStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3B018268F694F00AE3976 /* TopStoriesViewController.swift */; };
+		B9D3B01C268F695B00AE3976 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3B01B268F695B00AE3976 /* SearchResultsViewController.swift */; };
+		B9D3B01F268F696900AE3976 /* StockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3B01E268F696900AE3976 /* StockDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B9D3AFF7268F667A00AE3976 /* StockAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D3AFFA268F667A00AE3976 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9D3AFFC268F667A00AE3976 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B9D3AFFE268F667A00AE3976 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B9D3B001268F667A00AE3976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B9D3AFFE268F667A00AE3976 /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
 		B9D3B003268F667B00AE3976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9D3B006268F667B00AE3976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9D3B008268F667B00AE3976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9D3B018268F694F00AE3976 /* TopStoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesViewController.swift; sourceTree = "<group>"; };
+		B9D3B01B268F695B00AE3976 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		B9D3B01E268F696900AE3976 /* StockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		B9D3AFF9268F667A00AE3976 /* StockAPP */ = {
 			isa = PBXGroup;
 			children = (
-				B9D3AFFA268F667A00AE3976 /* AppDelegate.swift */,
-				B9D3AFFC268F667A00AE3976 /* SceneDelegate.swift */,
-				B9D3AFFE268F667A00AE3976 /* ViewController.swift */,
-				B9D3B000268F667A00AE3976 /* Main.storyboard */,
-				B9D3B003268F667B00AE3976 /* Assets.xcassets */,
-				B9D3B005268F667B00AE3976 /* LaunchScreen.storyboard */,
+				B9D3B013268F68CD00AE3976 /* Other */,
+				B9D3B012268F68C200AE3976 /* Managers */,
+				B9D3B011268F68B000AE3976 /* Controllers */,
+				B9D3B010268F68A900AE3976 /* Views */,
+				B9D3B00F268F689E00AE3976 /* Models */,
 				B9D3B008268F667B00AE3976 /* Info.plist */,
 			);
 			path = StockAPP;
+			sourceTree = "<group>";
+		};
+		B9D3B00F268F689E00AE3976 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B9D3B010268F68A900AE3976 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9D3B005268F667B00AE3976 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9D3B011268F68B000AE3976 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B9D3AFFE268F667A00AE3976 /* WatchListViewController.swift */,
+				B9D3B018268F694F00AE3976 /* TopStoriesViewController.swift */,
+				B9D3B01B268F695B00AE3976 /* SearchResultsViewController.swift */,
+				B9D3B01E268F696900AE3976 /* StockDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B9D3B012268F68C200AE3976 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B9D3B013268F68CD00AE3976 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B9D3B003268F667B00AE3976 /* Assets.xcassets */,
+				B9D3AFFA268F667A00AE3976 /* AppDelegate.swift */,
+				B9D3AFFC268F667A00AE3976 /* SceneDelegate.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +172,6 @@
 			files = (
 				B9D3B007268F667B00AE3976 /* LaunchScreen.storyboard in Resources */,
 				B9D3B004268F667B00AE3976 /* Assets.xcassets in Resources */,
-				B9D3B002268F667A00AE3976 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +182,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9D3AFFF268F667A00AE3976 /* ViewController.swift in Sources */,
+				B9D3B01F268F696900AE3976 /* StockDetailViewController.swift in Sources */,
+				B9D3B019268F694F00AE3976 /* TopStoriesViewController.swift in Sources */,
+				B9D3AFFF268F667A00AE3976 /* WatchListViewController.swift in Sources */,
 				B9D3AFFB268F667A00AE3976 /* AppDelegate.swift in Sources */,
 				B9D3AFFD268F667A00AE3976 /* SceneDelegate.swift in Sources */,
+				B9D3B01C268F695B00AE3976 /* SearchResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B9D3B000268F667A00AE3976 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B9D3B001268F667A00AE3976 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B9D3B005268F667B00AE3976 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,6 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C3H8B5L9S4;
 				INFOPLIST_FILE = StockAPP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +337,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeWithKenny.StockAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C3H8B5L9S4;
 				INFOPLIST_FILE = StockAPP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeWithKenny.StockAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
