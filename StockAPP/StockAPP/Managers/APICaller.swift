@@ -13,9 +13,7 @@ final class APICaller {
     static let shared = APICaller()
     
     // MARK: - Life cycle
-    private init() {
-        
-    }
+    private init() {}
     
     // MARK: - Public
     
@@ -24,7 +22,7 @@ final class APICaller {
         request(url: url(for: .search, queryParams: ["q": safeQuery]), expection: SearchResponse.self, completion: completion)
     }
     
-    // MARK: - Methods
+    // MARK: - Search API
     
     private func url(for endPoint: Endpoint, queryParams: [String: String] = [:]) -> URL? {
         
@@ -67,12 +65,30 @@ final class APICaller {
         }
         task.resume()
     }
+    
+    // MARK: - News API
+    
+    func news(for type: NewsViewController.`Type`, completion: @escaping (Result<[NewsStory],Error>) -> Void) {
+        let today = Date()
+        let oneMonthBack = today.addingTimeInterval(-(Constants.day * 7))
+        switch type {
+        case .topStories:
+                let newUrl = url(for: .topStories, queryParams: ["category": "general"])
+                request(url: newUrl, expection: [NewsStory].self, completion: completion)
+        case .compan(let symbol):
+            let newUrl = url(for: .companyNews, queryParams: ["symbol": symbol, "from": DateFormatter.newsDateFormatter.string(from: oneMonthBack), "to": DateFormatter.newsDateFormatter.string(from: today)])
+            request(url: newUrl, expection: [NewsStory].self, completion: completion)
+            
+        }
+    }
 }
 
 // MARK: - ENUM
 extension APICaller {
     private enum Endpoint: String {
         case search = "search"
+        case topStories = "news"
+        case companyNews = "company-news"
     }
     
     private enum APIError: Error {
@@ -82,10 +98,10 @@ extension APICaller {
     
     // Sign up API from https://finnhub.io/
     private struct Constants {
-        
-        static let apiKey = "I Did Push api key "
+       
+        static let apiKey = "NO push"
         static let sandboxApiKey = ""
         static let baseUrl = ""
-        
+        static let day: TimeInterval = 3600 * 2
     }
 }
