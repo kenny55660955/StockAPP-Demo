@@ -2,6 +2,6 @@
 
 API Document: https://finnhub.io/docs/api
 
-☀Languages: Swift
-☀Architecture: MVVM
-☀Layout: Programmatic UI
+☀Languages: Swift </br>
+☀Architecture: MVVM </br>
+☀Layout: Programmatic UI </br>
