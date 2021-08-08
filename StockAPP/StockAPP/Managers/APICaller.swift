@@ -22,6 +22,18 @@ final class APICaller {
         request(url: url(for: .search, queryParams: ["q": safeQuery]), expection: SearchResponse.self, completion: completion)
     }
     
+    func marketData(for symbol: String, numberOfDays: TimeInterval = 7, completion: @escaping (Result<MarketDataResponse, Error>) -> Void)  {
+        // 假日不開盤會取不到資料
+        let today = Date().addingTimeInterval(-(Constants.day))
+        let prior = today.addingTimeInterval(-(Constants.day * numberOfDays))
+        print(prior)
+        if let url = url(for: .marketDatas, queryParams: ["symbol": symbol, "resolution": "1", "from": "\(Int(prior.timeIntervalSince1970))", "to": "\(Int(today.timeIntervalSince1970))"]) {
+            request(url: url, expection: MarketDataResponse.self, completion: completion)
+        }
+        
+        
+    }
+    
     // MARK: - Search API
     
     private func url(for endPoint: Endpoint, queryParams: [String: String] = [:]) -> URL? {
@@ -89,6 +101,7 @@ extension APICaller {
         case search = "search"
         case topStories = "news"
         case companyNews = "company-news"
+        case marketDatas = "stock/candle"
     }
     
     private enum APIError: Error {
@@ -98,8 +111,9 @@ extension APICaller {
     
     // Sign up API from https://finnhub.io/
     private struct Constants {
-       
-        static let apiKey = "NO push"
+        
+        
+        static let apiKey = ""
         static let sandboxApiKey = ""
         static let baseUrl = ""
         static let day: TimeInterval = 3600 * 2

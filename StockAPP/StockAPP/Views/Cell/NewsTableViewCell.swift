@@ -100,7 +100,7 @@ extension NewsTableViewCell {
         init(model: NewsStory) {
             self.sourece = model.source
             self.headline = model.headline
-            self.dateString = String.string(from: model.datetime)
+            self.dateString = String.timeInterString(from: model.datetime)
             self.imageURL = URL(string: model.image)
         }
     }
