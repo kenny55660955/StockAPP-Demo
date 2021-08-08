@@ -112,7 +112,6 @@ extension APICaller {
     // Sign up API from https://finnhub.io/
     private struct Constants {
         
-        
         static let apiKey = ""
         static let sandboxApiKey = ""
         static let baseUrl = ""
