@@ -30,9 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func debug() {
-        APICaller.shared.news(for: .compan(symbol: "MSFT")) { result in
-            print(result)
-        }
+        // 測試
+//        APICaller.shared.news(for: .compan(symbol: "MSFT")) { result in
+//            print(result)
+//        }
+        // 測試開盤價
+//        APICaller.shared.marketData(for: "MSFT", numberOfDays: 7) { Result in
+//            print(Result)
+//        }
     }
 
 }
